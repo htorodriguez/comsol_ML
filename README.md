@@ -25,7 +25,7 @@ In the best case make a full factorial DoE.
         y_pred=pipeline.predict(X_test)
 
 # Sensitivity, Robustness or Pareto frontier
-[Sensitivity analysis[(https://renovadotengineering.wordpress.com/2020/03/17/example-post-3/) to identify the inputs have the larger or the smaller effect on the outputs
+[Sensitivity analysis](https://renovadotengineering.wordpress.com/2020/03/17/example-post-3/) to identify the inputs have the larger or the smaller effect on the outputs
 Robustness analysis to estimate the 6-sigma ranges of the output distributions 
 Find pareto frontier for cost against performance
 
