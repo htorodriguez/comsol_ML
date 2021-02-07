@@ -6,6 +6,7 @@ Workflow for the analysis and optmization of a Comsol model using machine learni
 # Running the batch process
 
 # Design of experiments
+In the best case make a full factorial DoE.
 
 # Machine learning pipeline to create a meta-model
 .. code:: python
@@ -24,8 +25,10 @@ Workflow for the analysis and optmization of a Comsol model using machine learni
         y_pred=pipeline.predict(X_test)
 
 # Sensitivity, Robustness or Pareto frontier
-Make 1st or total 
-Define cost functions, 
+[Sensitivity analysis[(https://renovadotengineering.wordpress.com/2020/03/17/example-post-3/) to identify the inputs have the larger or the smaller effect on the outputs
+Robustness analysis to estimate the 6-sigma ranges of the output distributions 
+Find pareto frontier for cost against performance
 
-# Confirm on model
+# Confirm on model and confirm on hardware
+Return to the original model to confirm predictions. Make experiments. Repeat.
 
