@@ -7,14 +7,14 @@ Workflow for the analysis and optmization of a Comsol model using machine learni
 
 # Design of experiments
 
-# Machine Learning Pipeline
+# Machine learning pipeline to create a meta-model
 .. code:: python
 
     def main():
         X, y = load_data()
         X_train, X_test, y_train, y_test = train_test_split(X, y)
         pipeline = Pipeline([('MinMax', MinMaxScaler()),
-                             ('pca',PCA(n_components=10)),
+                             ('pca',PCA()),
                              ('support_vector', LinearSVR()),
                              # or linear regression, or tree methods
                             ])
@@ -22,6 +22,10 @@ Workflow for the analysis and optmization of a Comsol model using machine learni
         pipeline.fit(X_train, y_train)
         # predict on test data
         y_pred=pipeline.predict(X_test)
-        # display results
-        display_results(y_test, y_pred)
+
+# Sensitivity, Robustness or Pareto frontier
+Make 1st or total 
+Define cost functions, 
+
+# Confirm on model
 
