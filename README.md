@@ -1,15 +1,34 @@
 # Getting the most of your Comsol mode
 Workflow for the analysis and optmization of a Comsol model using machine learning
 
-# Define your Model, inputs and outputs
+# Define your Model, inputs and outputs : COMSOL
 
-# Running the batch process
+## Inputs 
+Under Global definitions, import a Input_Parameters.txt file, e.g.
+    model.param().loadFile("parameters.txt");
+## Model 
+Use Comsol Gui
+## Outputs 
+Export you results into a table, e.g.  
+    model.result().export("export_table").run()
+## Export Model to .java file
+export your model and actions into a .java file, e.g.
+    my_model.java
+# Running the batch process: .cmd (windows) or .sh(linux) script 
+Cast the comsol compilation and batch process into a .cmd file
+"...your_path_to_comsol_bin...\comsolcompile.exe" my_model.java
+"...your_path_to_comsol_bin...\comsolbatch.exe" -inputfile  my_model.class -batchlog log.txt -nosave
 
-# Design of experiments
-In the best case make a full factorial DoE.
+# Simulation automation: Python
 
-# Machine learning pipeline to create a meta-model
-.. code:: python
+## Design of experiments
+Make an adequate DoE to explore the parameter space according to the use case.
+
+## Run the DoE
+Create child folders, run and store the input parameters (X) and output results (y) of the automated simulation
+
+## Machine learning pipeline to create a meta-model
+Typical machine learning pipeline to approximate the simulation
 
     def main():
         X, y = load_data()
@@ -24,7 +43,7 @@ In the best case make a full factorial DoE.
         # predict on test data
         y_pred=pipeline.predict(X_test)
 
-# Sensitivity, Robustness or Pareto frontier
+## Sensitivity, Robustness or Pareto frontier
 [Sensitivity analysis](https://renovadotengineering.wordpress.com/2020/03/17/example-post-3/) to identify the inputs have the larger or the smaller effect on the outputs
 Robustness analysis to estimate the 6-sigma ranges of the output distributions 
 Find pareto frontier for cost against performance
