@@ -1,34 +1,37 @@
-# Getting the most of your Comsol mode
+## Getting the most of your Comsol mode
 Workflow for the analysis and optmization of a Comsol model using machine learning
 
-# Define your Model, inputs and outputs : COMSOL
+## Define your Model, inputs and outputs : COMSOL
 
-## Inputs 
+### Inputs 
 Under Global definitions, import a Input_Parameters.txt file, e.g.
     model.param().loadFile("parameters.txt");
-## Model 
+### Model 
 Use Comsol Gui
-## Outputs 
+### Outputs 
 Export you results into a table, e.g.  
     model.result().export("export_table").run()
-## Export Model to .java file
+### Export Model to .java file
 export your model and actions into a .java file, e.g.
     my_model.java
-# Running the batch process: .cmd (windows) or .sh(linux) script 
+## Running the batch process: .cmd (windows) or .sh(linux) script 
 Cast the comsol compilation and batch process into a .cmd file
-"...your_path_to_comsol_bin...\comsolcompile.exe" my_model.java
-"...your_path_to_comsol_bin...\comsolbatch.exe" -inputfile  my_model.class -batchlog log.txt -nosave
+    "...your_path_to_comsol_bin...\comsolcompile.exe" my_model.java
+    "...your_path_to_comsol_bin...\comsolbatch.exe" -inputfile  my_model.class -batchlog log.txt -nosave
 
-# Simulation automation: Python
+## Simulation automation: Python
 
-## Design of experiments
+### Design of experiments
 Make an adequate DoE to explore the parameter space according to the use case.
 
-## Run the DoE
-Create child folders, run and store the input parameters (X) and output results (y) of the automated simulation
+### Run the DoE
+Create child folders, 
+run and store the input parameters matrix (X) 
+and output result vector (y) 
+of the automated simulations
 
-## Machine learning pipeline to create a meta-model
-Typical machine learning pipeline to approximate the simulation
+### Machine learning pipeline to create a meta-model
+Make a machine learning pipeline to approximate the simulation by finding an adequate model to map X into y
 
     def main():
         X, y = load_data()
