@@ -4,16 +4,16 @@
 
 ### Inputs 
 Under Global definitions, import a Input_Parameters.txt file<br/>
-        '''model.param().loadFile("parameters.txt")'''
+    model.param().loadFile("parameters.txt")
     
 ### Outputs 
 Export you results into a table, e.g.  <br/>
     model.result().export("export_table").run()
 ### Export Model to .java file
-export your model and actions into a .java file, e.g.
-    '''my_model.java'''
+export your model and actions into a .java file<br/>
+    my_model.java
 ## Running the batch process: .cmd (windows) or .sh(linux) script 
-Cast the comsol compilation and batch process into a .cmd file
+Cast the comsol compilation and batch process into a .cmd or a .sh file
     "...your_path_to_comsol_bin...\comsolcompile.exe" my_model.java
     "...your_path_to_comsol_bin...\comsolbatch.exe" -inputfile  my_model.class -batchlog log.txt -nosave
 
