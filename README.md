@@ -30,8 +30,7 @@ Make an adequate DoE to explore the parameter space according to the use case.
 ### Run the DoE
 * Create child folders, 
 * run and store the input parameters matrix (X) 
-* and output result vector (y) 
-* of the automated simulations
+* and the output result vector (y) 
 
 ### Machine learning pipeline to create a meta-model
 Make a machine learning pipeline to approximate the simulation by finding an adequate model to map X into y
@@ -55,5 +54,7 @@ Make a machine learning pipeline to approximate the simulation by finding an ade
 * Robustness analysis to estimate the 6-sigma ranges of the output distributions.
  
 * Find pareto frontier for cost against performance.
+
+* Confirm the result on the orginal model
 
 
