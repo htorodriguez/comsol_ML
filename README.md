@@ -1,5 +1,5 @@
 # Comsol meta-modelling workflow
-
+![workflow](/Workflow.png)
 ## Define your Comsol model
 
 ### Inputs 
