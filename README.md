@@ -3,11 +3,11 @@
 ## Define your Comsol model
 
 ### Inputs 
-Under Global definitions, import a Input_Parameters.txt file
+Under Global definitions, import a Input_Parameters.txt file<br/>
         model.param().loadFile("parameters.txt");
     
 ### Outputs 
-Export you results into a table, e.g.  
+Export you results into a table, e.g.  <br/>
     model.result().export("export_table").run()
 ### Export Model to .java file
 export your model and actions into a .java file, e.g.
