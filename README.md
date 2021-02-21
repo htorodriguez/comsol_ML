@@ -1,5 +1,4 @@
-## Getting the most of your Comsol mode
-Workflow for the analysis and optmization of a Comsol model using machine learning
+# Workflow for the analysis and optmization of a Comsol model using meta-modelling
 
 ## Define your Model, inputs and outputs : COMSOL
 
@@ -51,6 +50,4 @@ Make a machine learning pipeline to approximate the simulation by finding an ade
 Robustness analysis to estimate the 6-sigma ranges of the output distributions 
 Find pareto frontier for cost against performance
 
-# Confirm on model and confirm on hardware
-Return to the original model to confirm predictions. Make experiments. Repeat.
 
