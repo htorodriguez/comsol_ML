@@ -3,10 +3,9 @@
 ## Define your Comsol model
 
 ### Inputs 
-Under Global definitions, import a Input_Parameters.txt file, e.g.
-    model.param().loadFile("parameters.txt");
-### Model 
-Use Comsol Gui
+Under Global definitions, import a Input_Parameters.txt file
+        model.param().loadFile("parameters.txt");
+    
 ### Outputs 
 Export you results into a table, e.g.  
     model.result().export("export_table").run()
