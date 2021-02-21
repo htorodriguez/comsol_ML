@@ -40,8 +40,8 @@ Make a machine learning pipeline to approximate the simulation by finding an ade
         X_train, X_test, y_train, y_test = train_test_split(X, y)
         pipeline = Pipeline([('MinMax', MinMaxScaler()),
                              ('pca',PCA()),
-                             ('support_vector', LinearSVR()),
-                             # or linear regression, or tree methods
+                             ('lasso', linear_model.Lasso())
+                             # or more involved models like support vector machines, or tree methods
                             ])
         # train classifier
         pipeline.fit(X_train, y_train)
