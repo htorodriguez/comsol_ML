@@ -28,10 +28,10 @@ Cast the comsol compilation and batch process into a .cmd or a .sh file<br/>
 Make an adequate DoE to explore the parameter space according to the use case.
 
 ### Run the DoE
-Create child folders, 
-run and store the input parameters matrix (X) 
-and output result vector (y) 
-of the automated simulations
+* Create child folders, 
+* run and store the input parameters matrix (X) 
+* and output result vector (y) 
+* of the automated simulations
 
 ### Machine learning pipeline to create a meta-model
 Make a machine learning pipeline to approximate the simulation by finding an adequate model to map X into y
@@ -50,8 +50,10 @@ Make a machine learning pipeline to approximate the simulation by finding an ade
         y_pred=pipeline.predict(X_test)
 
 ## Sensitivity, Robustness or Pareto frontier
-[Sensitivity analysis](https://renovadotengineering.wordpress.com/2020/03/17/example-post-3/) to identify the inputs have the larger or the smaller effect on the outputs
-Robustness analysis to estimate the 6-sigma ranges of the output distributions 
-Find pareto frontier for cost against performance
+* [Sensitivity analysis](https://renovadotengineering.wordpress.com/2020/03/17/example-post-3/) to identify the inputs have the larger or the smaller effect on the outputs.
+
+* Robustness analysis to estimate the 6-sigma ranges of the output distributions.
+ 
+* Find pareto frontier for cost against performance.
 
 
