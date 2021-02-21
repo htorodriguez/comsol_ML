@@ -1,6 +1,6 @@
-# Workflow for the analysis and optmization of a Comsol model using meta-modelling
+# Comsol meta-modelling workflow
 
-## Define your Model, inputs and outputs : COMSOL
+## Define your Comsol model
 
 ### Inputs 
 Under Global definitions, import a Input_Parameters.txt file, e.g.
